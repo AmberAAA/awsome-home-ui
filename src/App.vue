@@ -3,8 +3,21 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
+  <Button>Button</Button>
   <router-view />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import AButtonVue from "./components/AButton.vue";
+
+export default defineComponent({
+  name: "app",
+  components: {
+    Button: AButtonVue,
+  },
+});
+</script>
 
 <style lang="less">
 #app {
